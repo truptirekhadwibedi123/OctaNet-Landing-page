@@ -1,0 +1,229 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #6e45e1, #88d3ce);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    float: left;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    float: right;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #6e45e1, #88d3ce);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #ffd700;
+    color: #333;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 0;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #6e45e1;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #88d3ce, #6e45e1);
+    color: white;
+    text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 1rem 2rem;
+    background-color: #6e45e1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #88d3ce;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+    }
+
+    .navbar .logo, .navbar .nav-links {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
